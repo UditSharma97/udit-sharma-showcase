@@ -101,14 +101,14 @@ const Hero = () => {
 
         <div className="hero-content text-center my-auto py-16">
           <div className="text-xl font-normal mb-2 tracking-wider" style={{ color: 'var(--text-muted)' }}>
-            Hello, I'm
+            Hello, I'm UDIT SHARMA
           </div>
           <h1 className="hero-title text-6xl md:text-8xl mb-4 font-roboto-mono leading-tight">
-            <span className="typing-text" data-text="Udit Sharma" style={{ color: 'var(--text-color)' }}></span>
+            <span className="typing-text" data-text="Creative DEveloper" style={{ color: 'var(--text-color)' }}></span>
             <span className="cursor"></span>
           </h1>
           <p className="text-xl mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-            A driven developer with a strong foundation in front-end technologies, complemented by expertise in programming languages like C++, Java, and Python. Passionate about leveraging the power of Machine Learning and Generative AI to build innovative web applications.
+           Building Websites, AI agents with Generative AI , Frontend Developer (React.js), Machine Learning & AI, Python, C++, Java. Passionate about leveraging the power of Machine Learning and Generative AI to build innovative web applications.
           </p>
           <div className="hero-buttons flex justify-center flex-wrap gap-4">
             <button 

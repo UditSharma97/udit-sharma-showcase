@@ -14,10 +14,10 @@ const Skills = () => {
     { name: "React.js", icon: "fab fa-react", color: "#6bcf7f" },
     { name: "Bootstrap", icon: "fab fa-bootstrap", color: "#a8e6cf" },
     { name: "MySQL", icon: "fas fa-database", color: "#ff6b6b" },
-    { name: "IBM Cloud", icon: "fas fa-cloud", color: "#4ecdc4" },
+    { name: "Azure Cloud", icon: "fas fa-cloud", color: "#4ecdc4" },
     { name: "UI/UX Design", icon: "fas fa-palette", color: "#ffd93d" },
     { name: "Git/GitHub", icon: "fab fa-git-alt", color: "#6bcf7f" },
-    { name: "Render", icon: "fas fa-server", color: "#a8e6cf" }
+    // { name: "Render", icon: "fas fa-server", color: "#a8e6cf" }
   ];
 
   const certifications = ['Java', 'SQL', 'C++', 'Generative AI', 'Robotics'];

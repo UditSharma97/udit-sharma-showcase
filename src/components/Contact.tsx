@@ -37,7 +37,7 @@ const Contact = () => {
         <div className="animate-on-scroll fade-in-up">
           <div className="contact-options flex flex-wrap justify-center gap-6 mb-16">
             <a 
-              href="mailto:asharma53858@gmail.com" 
+              href="mailto:sharma2004udit@gmail.com" 
               className="contact-link flex items-center gap-4 px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 min-w-64 justify-center"
               style={{
                 background: 'rgba(30, 30, 30, 0.8)',
@@ -68,7 +68,7 @@ const Contact = () => {
             </a>
 
             <a 
-              href="https://linkedin.com/in/aksharma127" 
+              href="https://www.linkedin.com/in/udit-sharma-029879294" 
               target="_blank" 
               rel="noopener noreferrer"
               className="contact-link flex items-center gap-4 px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 min-w-64 justify-center"
@@ -101,7 +101,7 @@ const Contact = () => {
             </a>
 
             <a 
-              href="https://github.com/Aksharma127" 
+              href="https://github.com/UditSharma97" 
               target="_blank" 
               rel="noopener noreferrer"
               className="contact-link flex items-center gap-4 px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 min-w-64 justify-center"

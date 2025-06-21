@@ -46,32 +46,27 @@ const About = () => {
           <div className="about-text animate-on-scroll slide-in-right">
             <div className="space-y-6">
               <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-                I'm a passionate Computer Science student with a drive for innovation and excellence. 
-                My journey in technology spans from fundamental programming concepts to cutting-edge 
-                AI applications, always with a focus on creating meaningful impact through code.
+                As a passionate 3rd-year B.Tech Computer Science Engineering student, my journey into tech began with a deep curiosity about how games and websites work—despite limited early access to technology. This curiosity sparked a self-driven learning path, strengthened by solid academic mentorship in Java and core programming.
               </p>
               
               <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-                With expertise in <span className="accent">front-end development</span>, 
+                I’ve developed a strong foundation in <span className="accent">front-end development</span>, 
                 <span className="accent"> machine learning</span>, and 
-                <span className="accent"> AI technologies</span>, I bring a unique perspective 
-                to every project. I'm particularly passionate about creating intuitive user 
-                experiences while leveraging the power of artificial intelligence.
-              </p>
+                <span className="accent"> AI technologies</span>,  
+                <span className="accent"> Python, C++, Java</span>, through self-learning and hands-on practice. My ability to quickly grasp new tools has been key in building real-world projects. </p>
 
               <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-                When I'm not coding, you'll find me exploring the latest developments in AI, 
-                contributing to open-source projects, or working on innovative solutions 
-                that bridge the gap between technology and real-world applications.
+                I'm keenly interested in Generative AI, AI Automation, AI Agents, and AI-driven multimedia generation. 
+                I'm actively seeking opportunities in AI, Machine Learning, and full-stack development to apply my skills and contribute to real-world challenges.
               </p>
 
               <div className="grid grid-cols-2 gap-6 mt-8">
                 <div className="text-center p-4 rounded-lg" style={{ backgroundColor: 'var(--surface-color)' }}>
-                  <div className="text-3xl font-bold" style={{ color: 'var(--primary-color)' }}>15+</div>
+                  <div className="text-3xl font-bold" style={{ color: 'var(--primary-color)' }}>5+</div>
                   <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Projects Completed</div>
                 </div>
                 <div className="text-center p-4 rounded-lg" style={{ backgroundColor: 'var(--surface-color)' }}>
-                  <div className="text-3xl font-bold" style={{ color: 'var(--primary-color)' }}>5+</div>
+                  <div className="text-3xl font-bold" style={{ color: 'var(--primary-color)' }}>4+</div>
                   <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Certifications</div>
                 </div>
               </div>
