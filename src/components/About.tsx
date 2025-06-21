@@ -1,73 +1,82 @@
 
-import React from 'react';
-import { Award, BookOpen, Code, Lightbulb } from 'lucide-react';
+import React, { useEffect, useRef } from 'react';
 
 const About = () => {
-  const highlights = [
-    {
-      icon: Code,
-      title: "Full-Stack Development",
-      description: "Proficient in modern web technologies including React, Node.js, and MERN stack"
-    },
-    {
-      icon: Lightbulb,
-      title: "AI & Machine Learning",
-      description: "Passionate about leveraging AI and ML to create innovative solutions"
-    },
-    {
-      icon: Award,
-      title: "Certified Professional",
-      description: "Multiple certifications in Java, SQL, C++, and Generative AI"
-    },
-    {
-      icon: BookOpen,
-      title: "Research Focused",
-      description: "Active researcher in big data security and cloud computing technologies"
-    }
-  ];
+  const aboutRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -50px 0px" }
+    );
+
+    const animatedElements = aboutRef.current?.querySelectorAll('.animate-on-scroll');
+    animatedElements?.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
-    <section id="about" className="py-20 bg-slate-800">
+    <section id="about" className="section alt-bg" ref={aboutRef}>
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-white mb-6">
-            About Me
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-lato leading-relaxed">
-            I'm a passionate Computer Science student with a drive for innovation and excellence. 
-            My journey in technology spans from fundamental programming concepts to cutting-edge 
-            AI applications, always with a focus on creating meaningful impact through code.
-          </p>
-        </div>
+        <h2 style={{ color: 'var(--primary-color)' }}>About Me</h2>
+        
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="about-image animate-on-scroll fade-in-up relative">
+            <div className="relative z-10 mx-auto max-w-sm">
+              <img 
+                src="/placeholder.svg" 
+                alt="Udit Sharma"
+                className="profile-pic w-full rounded-lg border-4 border-opacity-20"
+                style={{ borderColor: 'var(--border-color)' }}
+              />
+              <div 
+                className="absolute -top-4 -left-4 w-11/12 h-11/12 border-2 border-dashed rounded-lg opacity-50 transition-transform duration-300 hover:rotate-[-5deg] hover:scale-105"
+                style={{ borderColor: 'var(--primary-color)' }}
+              ></div>
+            </div>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-          {highlights.map((item, index) => (
-            <div
-              key={index}
-              className="bg-slate-700 rounded-lg p-6 hover:bg-slate-600 transition-colors duration-300 hover:scale-105 transform transition-transform"
-            >
-              <div className="flex flex-col items-center text-center">
-                <item.icon size={48} className="text-blue-400 mb-4" />
-                <h3 className="text-xl font-bold font-montserrat text-white mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-gray-300 font-lato">
-                  {item.description}
-                </p>
+          <div className="about-text animate-on-scroll slide-in-right">
+            <div className="space-y-6">
+              <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                I'm a passionate Computer Science student with a drive for innovation and excellence. 
+                My journey in technology spans from fundamental programming concepts to cutting-edge 
+                AI applications, always with a focus on creating meaningful impact through code.
+              </p>
+              
+              <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                With expertise in <span className="accent">front-end development</span>, 
+                <span className="accent"> machine learning</span>, and 
+                <span className="accent"> AI technologies</span>, I bring a unique perspective 
+                to every project. I'm particularly passionate about creating intuitive user 
+                experiences while leveraging the power of artificial intelligence.
+              </p>
+
+              <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                When I'm not coding, you'll find me exploring the latest developments in AI, 
+                contributing to open-source projects, or working on innovative solutions 
+                that bridge the gap between technology and real-world applications.
+              </p>
+
+              <div className="grid grid-cols-2 gap-6 mt-8">
+                <div className="text-center p-4 rounded-lg" style={{ backgroundColor: 'var(--surface-color)' }}>
+                  <div className="text-3xl font-bold" style={{ color: 'var(--primary-color)' }}>15+</div>
+                  <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Projects Completed</div>
+                </div>
+                <div className="text-center p-4 rounded-lg" style={{ backgroundColor: 'var(--surface-color)' }}>
+                  <div className="text-3xl font-bold" style={{ color: 'var(--primary-color)' }}>5+</div>
+                  <div className="text-sm" style={{ color: 'var(--text-muted)' }}>Certifications</div>
+                </div>
               </div>
             </div>
-          ))}
-        </div>
-
-        <div className="bg-gradient-to-r from-blue-600 to-slate-700 rounded-lg p-8 text-center">
-          <h3 className="text-2xl font-bold font-montserrat text-white mb-4">
-            My Mission
-          </h3>
-          <p className="text-lg text-gray-100 max-w-2xl mx-auto font-lato">
-            To bridge the gap between innovative technology and real-world applications, 
-            creating solutions that not only showcase technical expertise but also 
-            deliver genuine value to users and society.
-          </p>
+          </div>
         </div>
       </div>
     </section>

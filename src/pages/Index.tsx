@@ -4,20 +4,18 @@ import Hero from '../components/Hero';
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
-import Research from '../components/Research';
 import Contact from '../components/Contact';
-import Navigation from '../components/Navigation';
+import Chatbot from '../components/Chatbot';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-slate-900">
-      <Navigation />
+    <div className="min-h-screen" style={{ backgroundColor: 'var(--bg-color)' }}>
       <Hero />
       <About />
       <Skills />
       <Projects />
-      <Research />
       <Contact />
+      <Chatbot />
     </div>
   );
 };

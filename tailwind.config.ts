@@ -20,6 +20,8 @@ export default {
 		},
 		extend: {
 			fontFamily: {
+				'inter': ['Inter', 'sans-serif'],
+				'roboto-mono': ['Roboto Mono', 'monospace'],
 				'montserrat': ['Montserrat', 'sans-serif'],
 				'lato': ['Lato', 'sans-serif'],
 			},
@@ -66,7 +68,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom portfolio colors
+				'portfolio-bg': '#111827',
+				'portfolio-bg-alt': '#1f2937',
+				'portfolio-surface': '#374151',
+				'portfolio-primary': '#38bdf8',
+				'portfolio-secondary': '#a78bfa',
+				'portfolio-accent': '#ec4899',
+				'portfolio-text': '#f3f4f6',
+				'portfolio-text-muted': '#9ca3af',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -99,12 +110,61 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'slide-in-left': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(-50px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'slide-in-right': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateX(50px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateX(0)'
+					}
+				},
+				'scale-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'scale(0.9)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'scale(1)'
+					}
+				},
+				'pulse-text': {
+					'0%, 100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					},
+					'50%': {
+						transform: 'scale(1.05)',
+						opacity: '0.9'
+					}
+				},
+				'blink': {
+					'0%, 100%': { opacity: '1' },
+					'50%': { opacity: '0' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.6s ease-out'
+				'fade-in': 'fade-in 0.6s ease-out',
+				'slide-in-left': 'slide-in-left 0.6s ease-out',
+				'slide-in-right': 'slide-in-right 0.6s ease-out',
+				'scale-up': 'scale-up 0.6s ease-out',
+				'pulse-text': 'pulse-text 2s infinite ease-in-out',
+				'blink': 'blink 1s infinite'
 			}
 		}
 	},
