@@ -163,6 +163,38 @@
     height: auto;
     display: block;
   }
+
+  /* Remove focus outlines globally for skill cards and interactive elements */
+  .tech-card,
+  .tech-card *,
+  .certification-card,
+  .certification-card * {
+    outline: none !important;
+    -webkit-tap-highlight-color: transparent !important;
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+  }
+
+  /* Remove default button and div focus styles */
+  button:focus,
+  button:active,
+  div:focus,
+  div:active,
+  .tech-card:focus,
+  .tech-card:active {
+    outline: none !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  /* Remove blue highlight on mobile tap */
+  * {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+  }
 }
 
 /* Custom Portfolio Styles */

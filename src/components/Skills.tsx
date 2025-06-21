@@ -55,12 +55,13 @@ const Skills = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div 
-                  className="tech-card p-6 rounded-xl text-center transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 cursor-pointer"
+                  className="tech-card p-6 rounded-xl text-center transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 cursor-pointer focus:outline-none focus:ring-0 focus:border-0"
                   style={{ 
                     background: 'rgba(30, 30, 30, 0.8)',
                     backdropFilter: 'blur(10px)',
                     border: '1px solid rgba(255, 255, 255, 0.1)',
-                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.3)'
+                    boxShadow: '0 4px 15px rgba(0, 0, 0, 0.3)',
+                    outline: 'none'
                   }}
                   onMouseEnter={(e) => {
                     const target = e.target as HTMLElement;
@@ -74,12 +75,13 @@ const Skills = () => {
                     target.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.3)';
                     target.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                   }}
+                  tabIndex={-1}
                 >
                   <i 
                     className={`${tech.icon} text-4xl mb-4 transition-all duration-300 group-hover:scale-110`}
-                    style={{ color: tech.color }}
+                    style={{ color: tech.color, outline: 'none' }}
                   ></i>
-                  <h3 className="text-lg font-semibold" style={{ color: 'var(--text-color)' }}>
+                  <h3 className="text-lg font-semibold" style={{ color: 'var(--text-color)', outline: 'none' }}>
                     {tech.name}
                   </h3>
                 </div>
@@ -96,11 +98,12 @@ const Skills = () => {
             {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold cursor-pointer"
+                className="px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 font-semibold cursor-pointer focus:outline-none focus:ring-0"
                 style={{
                   background: 'linear-gradient(135deg, #ff6b6b, #ffd93d)',
                   color: '#1a1a1a',
-                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)'
+                  boxShadow: '0 4px 15px rgba(0, 0, 0, 0.2)',
+                  outline: 'none'
                 }}
                 onMouseEnter={(e) => {
                   const target = e.target as HTMLElement;
@@ -112,6 +115,7 @@ const Skills = () => {
                   target.style.boxShadow = '0 4px 15px rgba(0, 0, 0, 0.2)';
                   target.style.transform = 'scale(1) translateY(0)';
                 }}
+                tabIndex={-1}
               >
                 {cert}
               </div>
