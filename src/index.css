@@ -46,19 +46,19 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* Custom Portfolio Variables */
-    --bg-color: #111827;
-    --bg-alt-color: #1f2937;
-    --surface-color: #374151;
-    --primary-color: #38bdf8;
-    --secondary-color: #a78bfa;
-    --accent-color: #ec4899;
-    --text-color: #f3f4f6;
-    --text-muted: #9ca3af;
+    /* Custom Portfolio Variables - Vibrant Theme */
+    --bg-color: #1a1a1a;
+    --bg-alt-color: #242424;
+    --surface-color: #2e2e2e;
+    --primary-color: #ff6b6b;
+    --secondary-color: #ffd93d;
+    --accent-color: #6bcf7f;
+    --text-color: #f0f0f0;
+    --text-muted: #b8b8b8;
     --border-color: rgba(255, 255, 255, 0.1);
-    --glow-color-primary: rgba(56, 189, 248, 0.3);
-    --glow-color-secondary: rgba(167, 139, 250, 0.3);
-    --glow-color-accent: rgba(236, 72, 153, 0.3);
+    --glow-color-primary: rgba(255, 107, 107, 0.4);
+    --glow-color-secondary: rgba(255, 217, 61, 0.4);
+    --glow-color-accent: rgba(107, 207, 127, 0.4);
     --font-primary: 'Inter', sans-serif;
     --font-secondary: 'Roboto Mono', monospace;
     --transition-speed: 0.4s;
@@ -136,7 +136,7 @@
     display: block;
     width: 80px;
     height: 3px;
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
     margin: 0.7rem auto 0;
     border-radius: 2px;
     opacity: 0.8;
@@ -155,7 +155,7 @@
   }
 
   a:hover {
-    color: var(--accent-color);
+    color: var(--secondary-color);
   }
 
   img {
