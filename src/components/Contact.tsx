@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+import { Mail, Github, Linkedin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const Contact = () => {
@@ -58,183 +58,68 @@ const Contact = () => {
     }, 1000);
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      label: "Email",
-      value: "udit.sharma@email.com",
-      href: "mailto:udit.sharma@email.com"
-    },
-    {
-      icon: Phone,
-      label: "Phone",
-      value: "+91 XXXXX XXXXX",
-      href: "tel:+91XXXXXXXXX"
-    },
-    {
-      icon: MapPin,
-      label: "Location",
-      value: "India",
-      href: "#"
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com",
-      color: "hover:text-gray-400"
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://linkedin.com",
-      color: "hover:text-blue-400"
-    }
-  ];
-
   return (
-    <section id="contact" className="py-20 bg-slate-800">
-      <div className="container mx-auto px-6">
+    <section id="contact" className="py-20 bg-slate-900 relative overflow-hidden">
+      {/* Background particles effect */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-2 h-2 bg-blue-400 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-1 h-1 bg-purple-400 rounded-full animate-pulse delay-300"></div>
+        <div className="absolute bottom-20 left-1/4 w-1.5 h-1.5 bg-blue-300 rounded-full animate-pulse delay-700"></div>
+        <div className="absolute bottom-40 right-1/3 w-1 h-1 bg-purple-300 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/2 left-1/2 w-2 h-2 bg-blue-500 rounded-full animate-pulse delay-500"></div>
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-white mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold font-montserrat text-blue-400 mb-4">
             Let's Connect
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto font-lato">
-            Ready to collaborate on exciting projects or discuss opportunities? 
-            I'd love to hear from you!
+          <div className="w-16 h-1 bg-gradient-to-r from-blue-400 to-purple-500 mx-auto mb-6"></div>
+          <p className="text-lg text-gray-400 max-w-2xl mx-auto font-lato">
+            Got a project or opportunity? Reach out!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Information */}
-          <div>
-            <h3 className="text-2xl font-bold font-montserrat text-white mb-8">
-              Get in Touch
-            </h3>
+        <div className="max-w-4xl mx-auto">
+          {/* Contact Links */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-6 mb-16">
+            <a
+              href="mailto:udit.sharma@email.com"
+              className="flex items-center justify-center w-80 h-16 bg-slate-800 hover:bg-slate-700 rounded-lg transition-all duration-300 group border border-slate-700 hover:border-blue-400"
+            >
+              <Mail size={20} className="text-blue-400 mr-3" />
+              <span className="text-white font-lato">udit.sharma@email.com</span>
+            </a>
             
-            <div className="space-y-6 mb-8">
-              {contactInfo.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="flex items-center space-x-4 p-4 bg-slate-700 rounded-lg hover:bg-slate-600 transition-colors duration-300 group"
-                >
-                  <div className="p-3 bg-blue-600 rounded-lg group-hover:bg-blue-500 transition-colors duration-300">
-                    <item.icon size={24} className="text-white" />
-                  </div>
-                  <div>
-                    <p className="text-gray-400 text-sm font-lato">{item.label}</p>
-                    <p className="text-white font-lato">{item.value}</p>
-                  </div>
-                </a>
-              ))}
-            </div>
-
-            <div>
-              <h4 className="text-lg font-semibold font-montserrat text-white mb-4">
-                Follow Me
-              </h4>
-              <div className="flex space-x-4">
-                {socialLinks.map((social, index) => (
-                  <a
-                    key={index}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 bg-slate-700 rounded-lg text-white transition-colors duration-300 ${social.color}`}
-                    aria-label={social.label}
-                  >
-                    <social.icon size={24} />
-                  </a>
-                ))}
-              </div>
-            </div>
+            <a
+              href="https://linkedin.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-80 h-16 bg-slate-800 hover:bg-slate-700 rounded-lg transition-all duration-300 group border border-slate-700 hover:border-blue-400"
+            >
+              <Linkedin size={20} className="text-blue-400 mr-3" />
+              <span className="text-white font-lato">LinkedIn</span>
+            </a>
+            
+            <a
+              href="https://github.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center w-80 h-16 bg-slate-800 hover:bg-slate-700 rounded-lg transition-all duration-300 group border border-slate-700 hover:border-blue-400"
+            >
+              <Github size={20} className="text-blue-400 mr-3" />
+              <span className="text-white font-lato">GitHub</span>
+            </a>
           </div>
 
-          {/* Contact Form */}
-          <div>
-            <h3 className="text-2xl font-bold font-montserrat text-white mb-8">
-              Send a Message
-            </h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-gray-300 font-lato mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-blue-400 focus:outline-none transition-colors duration-300 font-lato"
-                    required
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-gray-300 font-lato mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-blue-400 focus:outline-none transition-colors duration-300 font-lato"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="subject" className="block text-gray-300 font-lato mb-2">
-                  Subject
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-blue-400 focus:outline-none transition-colors duration-300 font-lato"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-gray-300 font-lato mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  rows={6}
-                  className="w-full bg-slate-700 border border-slate-600 rounded-lg px-4 py-3 text-white focus:border-blue-400 focus:outline-none transition-colors duration-300 font-lato resize-none"
-                  required
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={isSubmitting}
-                className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-blue-800 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-300 flex items-center justify-center space-x-2 font-lato"
-              >
-                {isSubmitting ? (
-                  <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white" />
-                ) : (
-                  <>
-                    <Send size={18} />
-                    <span>Send Message</span>
-                  </>
-                )}
-              </button>
-            </form>
+          {/* Footer */}
+          <div className="text-center pt-12 border-t border-slate-800">
+            <p className="text-gray-400 font-lato mb-2">
+              Designed & Built by Udit Sharma © 2025
+            </p>
+            <p className="text-gray-500 font-lato">
+              Powered by <span className="text-blue-400">Code</span> & <span className="text-purple-400">Creativity</span>
+            </p>
           </div>
         </div>
       </div>
