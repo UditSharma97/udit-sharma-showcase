@@ -45,17 +45,17 @@ const About = () => {
 
           <div className="about-text animate-on-scroll slide-in-right">
             <div className="space-y-6">
-              <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+              <p className="text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                 As a passionate 3rd-year B.Tech Computer Science Engineering student, my journey into tech began with a deep curiosity about how games and websites work—despite limited early access to technology. This curiosity sparked a self-driven learning path, strengthened by solid academic mentorship in Java and core programming.
               </p>
               
-              <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+              <p className="text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                 I’ve developed a strong foundation in <span className="accent">front-end development</span>, 
                 <span className="accent"> machine learning</span>, and 
                 <span className="accent"> AI technologies</span>,  
                 <span className="accent"> Python, C++, Java</span>, through self-learning and hands-on practice. My ability to quickly grasp new tools has been key in building real-world projects. </p>
 
-              <p className="text-lg leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+              <p className="text-base leading-relaxed" style={{ color: 'var(--text-muted)' }}>
                 I'm keenly interested in Generative AI, AI Automation, AI Agents, and AI-driven multimedia generation. 
                 I'm actively seeking opportunities in AI, Machine Learning, and full-stack development to apply my skills and contribute to real-world challenges.
               </p>

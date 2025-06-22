@@ -104,15 +104,15 @@ const Hero = () => {
             Hello, I'm UDIT SHARMA
           </div>
           <h1 className="hero-title text-6xl md:text-8xl mb-4 font-roboto-mono leading-tight">
-            <span className="typing-text" data-text="Creative DEveloper" style={{ color: 'var(--text-color)' }}></span>
+            <span className="typing-text" data-text="Creative DeveLoper" style={{ color: 'var(--text-color)' }}></span>
             <span className="cursor"></span>
           </h1>
-          <p className="text-xl mb-10 max-w-2xl mx-auto leading-relaxed" style={{ color: 'var(--text-muted)' }}>
-           Building Websites, AI agents with Generative AI , Frontend Developer (React.js), Machine Learning & AI, Python, C++, Java. Passionate about leveraging the power of Machine Learning and Generative AI to build innovative web applications.
+          <p className="text-xl mb-10 max-w-3xl mx-auto leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+            Passionate about leveraging the power of Machine Learning and Generative AI to build innovative web applications.
           </p>
           <div className="hero-buttons flex justify-center flex-wrap gap-4">
             <button 
-              className="cta-button inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold uppercase tracking-wider transition-all duration-300 transform hover:scale-105"
+              className="cta-button inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold uppercase tracking-wider transition-all duration-300 transform hover:scale-105 "
               style={{
                 background: 'linear-gradient(90deg, var(--primary-color), var(--secondary-color))',
                 color: 'var(--bg-color)',
@@ -129,7 +129,8 @@ const Hero = () => {
                 target.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
               }}
             >
-              View My Work <i className="fas fa-arrow-right"></i>
+             View My Work<a href="https://github.com/UditSharma97" ><i className="fas fa-arrow-right 	text-black"></i></a> 
+              
             </button>
             <button 
               className="secondary-button inline-flex items-center gap-2 px-8 py-4 rounded-full font-semibold uppercase tracking-wider transition-all duration-300 transform hover:scale-105 border-2"
@@ -151,7 +152,16 @@ const Hero = () => {
                 target.style.transform = 'translateY(0) scale(1)';
               }}
             >
-              Download CV <i className="fas fa-download"></i>
+                <a
+                href="/resume.pdf"
+                download
+                // className="inline-flex items-center gap-2 px-6 py-2 text-white bg-green-600 rounded-lg hover:bg-green-700 transition font-semibold"
+                 className="inline-flex items-center gap-2 px-6 py-2 rounded-lg transition font-semibold"
+                  style={{ color: '#FF6B6B' }}
+                >
+                Download CV <i className="fas fa-download"></i>
+              </a>
+              {/* Download CV <i className="fas fa-download"></i> */}
             </button>
           </div>
         </div>

@@ -38,11 +38,11 @@ const Projects = () => {
               }}
               onMouseEnter={(e) => {
                 const target = e.target as HTMLElement;
-                target.style.boxShadow = '0 10px 30px #ff6b6b40';
+                target.style.boxShadow = '0 10px 30pxrgba(255, 107, 107, 0)';
               }}
               onMouseLeave={(e) => {
                 const target = e.target as HTMLElement;
-                target.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+                target.style.boxShadow = '0 5px 20px rgba(255, 255, 255, 0)';
               }}
             >
               <div className="project-image h-48 overflow-hidden">
