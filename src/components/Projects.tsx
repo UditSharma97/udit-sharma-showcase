@@ -27,17 +27,16 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <h2 style={{ color: 'var(--primary-color)' }}>Featured Projects</h2>
         
-        {/* Updated grid to use 3 columns on large screens and center cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center max-w-7xl mx-auto">
           <div className="animate-on-scroll scale-up">
             <div 
-              className="project-card rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
+              className="project-card rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 flex flex-col"
               style={{ 
                 background: 'var(--bg-color)',
                 border: '1px solid var(--border-color)',
                 boxShadow: '0 5px 20px rgba(0, 0, 0, 0.3)',
-                maxWidth: '380px',  // Narrower width
-                minHeight: '550px', // Taller height
+                maxWidth: '380px',
+                minHeight: '550px',
                 width: '100%'
               }}
               onMouseEnter={(e) => {
@@ -49,7 +48,7 @@ const Projects = () => {
                 target.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
               }}
             >
-              <div className="project-image h-52 overflow-hidden"> {/* Increased image height */}
+              <div className="project-image h-48 overflow-hidden">
                 <img 
                   src="/placeholder.svg" 
                   alt="Visa Flow Project"
@@ -57,20 +56,21 @@ const Projects = () => {
                 />
               </div>
               
-              <div className="project-content p-6 flex flex-col h-full">
-                <h3 className="text-xl font-bold mb-3" style={{ color: '#ff6b6b' }}>
+              <div className="project-content p-6 flex flex-col flex-grow">
+                <h3 className="text-xl font-bold mb-4 text-center" style={{ color: '#ff6b6b' }}>
                   Visa Flow - AI-Powered Assistant
                 </h3>
-                <p className="mb-4 leading-relaxed text-sm flex-grow" style={{ color: 'var(--text-muted)' }}>
+                
+                <p className="mb-6 leading-relaxed text-sm text-center flex-grow" style={{ color: 'var(--text-muted)' }}>
                   A full-stack web application using the MERN stack and AI models (Lovable.ai, Claude, and Gemini) 
                   to streamline the visa application process with intelligent assistance.
                 </p>
                 
-                <div className="project-tags mb-6 flex flex-wrap gap-2">
+                <div className="project-tags mb-6 flex flex-wrap gap-2 justify-center">
                   {['MERN Stack', 'AI Integration', 'Full-Stack'].map((tag, index) => (
                     <span 
                       key={index}
-                      className="px-2 py-1 rounded-full text-xs font-medium"
+                      className="px-3 py-1 rounded-full text-xs font-medium"
                       style={{ 
                         backgroundColor: '#ff6b6b20',
                         color: '#ff6b6b',
@@ -87,7 +87,7 @@ const Projects = () => {
                     href="http://globe-permit-hub-84.lovable.app/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-semibold transition-colors duration-300 text-sm"
+                    className="inline-flex items-center gap-2 font-semibold transition-colors duration-300 text-sm hover:scale-105"
                     style={{ color: '#ff6b6b' }}
                     onMouseEnter={(e) => {
                       const target = e.target as HTMLElement;
@@ -103,7 +103,7 @@ const Projects = () => {
                   </a>
                   <a 
                     href="#" 
-                    className="inline-flex items-center gap-2 font-semibold transition-colors duration-300 text-sm"
+                    className="inline-flex items-center gap-2 font-semibold transition-colors duration-300 text-sm hover:scale-105"
                     style={{ color: '#6bcf7f' }}
                     onMouseEnter={(e) => {
                       const target = e.target as HTMLElement;
@@ -128,8 +128,8 @@ const Projects = () => {
               style={{ 
                 background: 'linear-gradient(135deg, #ff6b6b20, #ffd93d20)',
                 border: '2px dashed #ff6b6b',
-                maxWidth: '380px',  // Narrower width to match first card
-                minHeight: '550px', // Taller height to match first card
+                maxWidth: '380px',
+                minHeight: '550px',
                 width: '100%'
               }}
               onMouseEnter={(e) => {
@@ -145,13 +145,13 @@ const Projects = () => {
                 target.style.boxShadow = 'none';
               }}
             >
-              <div className="more-content">
-                <i className="fas fa-plus text-6xl mb-4" style={{ color: '#ff6b6b' }}></i>
-                <h3 className="text-2xl font-bold font-roboto-mono" style={{ color: '#ff6b6b' }}>
+              <div className="more-content px-6">
+                <i className="fas fa-plus text-5xl mb-6" style={{ color: '#ff6b6b' }}></i>
+                <h3 className="text-xl font-bold font-roboto-mono mb-4" style={{ color: '#ff6b6b' }}>
                   More Projects Coming Soon
                 </h3>
-                <p className="mt-2" style={{ color: 'var(--text-muted)' }}>
-                  Currently working on exciting new projects
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                  Currently working on exciting new projects that will showcase innovative solutions
                 </p>
               </div>
             </div>
