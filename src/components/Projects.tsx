@@ -27,25 +27,29 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <h2 style={{ color: 'var(--primary-color)' }}>Featured Projects</h2>
         
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        {/* Updated grid to use 3 columns on large screens and center cards */}
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center max-w-7xl mx-auto">
           <div className="animate-on-scroll scale-up">
             <div 
               className="project-card rounded-xl overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
               style={{ 
                 background: 'var(--bg-color)',
                 border: '1px solid var(--border-color)',
-                boxShadow: '0 5px 20px rgba(0, 0, 0, 0.3)'
+                boxShadow: '0 5px 20px rgba(0, 0, 0, 0.3)',
+                maxWidth: '380px',  // Narrower width
+                minHeight: '550px', // Taller height
+                width: '100%'
               }}
               onMouseEnter={(e) => {
                 const target = e.target as HTMLElement;
-                target.style.boxShadow = '0 10px 30pxrgba(255, 107, 107, 0)';
+                target.style.boxShadow = '0 10px 30px rgba(255, 107, 107, 0.3)';
               }}
               onMouseLeave={(e) => {
                 const target = e.target as HTMLElement;
-                target.style.boxShadow = '0 5px 20px rgba(255, 255, 255, 0)';
+                target.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
               }}
             >
-              <div className="project-image h-48 overflow-hidden">
+              <div className="project-image h-52 overflow-hidden"> {/* Increased image height */}
                 <img 
                   src="/placeholder.svg" 
                   alt="Visa Flow Project"
@@ -53,11 +57,11 @@ const Projects = () => {
                 />
               </div>
               
-              <div className="project-content p-6">
-                <h3 className="text-2xl font-bold mb-3" style={{ color: '#ff6b6b' }}>
+              <div className="project-content p-6 flex flex-col h-full">
+                <h3 className="text-xl font-bold mb-3" style={{ color: '#ff6b6b' }}>
                   Visa Flow - AI-Powered Assistant
                 </h3>
-                <p className="mb-4 leading-relaxed" style={{ color: 'var(--text-muted)' }}>
+                <p className="mb-4 leading-relaxed text-sm flex-grow" style={{ color: 'var(--text-muted)' }}>
                   A full-stack web application using the MERN stack and AI models (Lovable.ai, Claude, and Gemini) 
                   to streamline the visa application process with intelligent assistance.
                 </p>
@@ -66,7 +70,7 @@ const Projects = () => {
                   {['MERN Stack', 'AI Integration', 'Full-Stack'].map((tag, index) => (
                     <span 
                       key={index}
-                      className="px-3 py-1 rounded-full text-sm font-medium"
+                      className="px-2 py-1 rounded-full text-xs font-medium"
                       style={{ 
                         backgroundColor: '#ff6b6b20',
                         color: '#ff6b6b',
@@ -78,12 +82,12 @@ const Projects = () => {
                   ))}
                 </div>
 
-                <div className="project-links border-t pt-4 flex justify-between items-center" style={{ borderColor: 'var(--border-color)' }}>
+                <div className="project-links border-t pt-4 flex justify-between items-center mt-auto" style={{ borderColor: 'var(--border-color)' }}>
                   <a 
                     href="http://globe-permit-hub-84.lovable.app/" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 font-semibold transition-colors duration-300"
+                    className="inline-flex items-center gap-2 font-semibold transition-colors duration-300 text-sm"
                     style={{ color: '#ff6b6b' }}
                     onMouseEnter={(e) => {
                       const target = e.target as HTMLElement;
@@ -99,7 +103,7 @@ const Projects = () => {
                   </a>
                   <a 
                     href="#" 
-                    className="inline-flex items-center gap-2 font-semibold transition-colors duration-300"
+                    className="inline-flex items-center gap-2 font-semibold transition-colors duration-300 text-sm"
                     style={{ color: '#6bcf7f' }}
                     onMouseEnter={(e) => {
                       const target = e.target as HTMLElement;
@@ -124,7 +128,9 @@ const Projects = () => {
               style={{ 
                 background: 'linear-gradient(135deg, #ff6b6b20, #ffd93d20)',
                 border: '2px dashed #ff6b6b',
-                minHeight: '400px'
+                maxWidth: '380px',  // Narrower width to match first card
+                minHeight: '550px', // Taller height to match first card
+                width: '100%'
               }}
               onMouseEnter={(e) => {
                 const target = e.target as HTMLElement;
